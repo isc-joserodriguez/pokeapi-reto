@@ -2,8 +2,8 @@ import { Table } from "react-bootstrap";
 
 const Tabla = ({ pokemones }) => {
   const pokeInfo = pokemones.map((pokemon, index) => (
-    <tr>
-      <td>{index + 1}</td>
+    <tr key={index}>
+      <td>{pokemon.order || index + 1}</td>
       <td style={{ textTransform: "capitalize" }}>{pokemon.name}</td>
     </tr>
   ));
