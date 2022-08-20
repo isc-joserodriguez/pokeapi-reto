@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Brand link</Navbar.Brand>
+        <Navbar.Brand href="#home">Pokemones</Navbar.Brand>
       </Container>
     </Navbar>
   );

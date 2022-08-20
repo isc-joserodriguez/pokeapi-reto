@@ -1,35 +1,22 @@
 import { Table } from "react-bootstrap";
 
-const Tabla = () => {
+const Tabla = ({ pokemones }) => {
+  const pokeInfo = pokemones.map((pokemon, index) => (
+    <tr>
+      <td>{index + 1}</td>
+      <td style={{ textTransform: "capitalize" }}>{pokemon.name}</td>
+    </tr>
+  ));
+
   return (
     <Table striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Nombre</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
+      <tbody>{pokeInfo}</tbody>
     </Table>
   );
 };
